@@ -30,3 +30,14 @@ SizedBox
         i.e. it is an anonymous function, function without name
     - Print message in the run window using print();
     - Hot reload accomodate the changes only under the build() function and not outside it
+    - Dart data types
+        String, int, double and bool
+        Dart variables are dynamic (like python and js) when not initialized but static when initialized(like java and cpp)
+                eg. var a; //any data type value can be assigned to a
+                    var a = 2 //only int values can be assigned to a;
+        Data types of dart varibales also can be explicitly declared : 
+            String s;
+            int a;
+            dynamic b; //any data type value can be assigned to b
+    - avoid var and dynamic datatypes to prevent code error
+    - the body of a Scaffold widget can be a user defined stateless widget class
