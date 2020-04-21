@@ -43,3 +43,10 @@ SizedBox
     - the body of a Scaffold widget can be a user defined stateless widget class
     - stateful class requires the changing variable value which change the state of the app to be declared under a separate 
         function called setState(){//your code}
+
+5. magic-8-ball-flutter:
+    - Using stateful widget inside stateless widget
+
+6. xylophone-flutter:
+    - sounds, texts etc are added the same way images are added i.e creating a folder and then updating the assets section
+        in the .yaml file
