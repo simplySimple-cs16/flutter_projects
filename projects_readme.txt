@@ -41,3 +41,5 @@ SizedBox
             dynamic b; //any data type value can be assigned to b
     - avoid var and dynamic datatypes to prevent code error
     - the body of a Scaffold widget can be a user defined stateless widget class
+    - stateful class requires the changing variable value which change the state of the app to be declared under a separate 
+        function called setState(){//your code}
