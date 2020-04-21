@@ -18,3 +18,15 @@ SizedBox
     - How Containers and rows can be replaced by Card and ListTiles to achieve better look
     - Padding can be added as parent class for widgets that doesn't have padding property
     - Divider class used inside SizedBox for adding horizontal line
+
+4. dicee_flutter
+    - How to prevent large images from overfitting the screen using expanded Widget i.e expanded widget for flexible layouts
+    - flex property of expanded widget for adjusting how much to expand across the main axis
+    - How to wrap a widget with a center,row,column widget using flutter inspector and delete parent widget without deleting
+        the child widget using the yellow light bulb.
+    - Working with flat button which already has a padding for its child widget so if its child was already padded then remove 
+        the pading for it
+    - Flat Button has on pressed property which is defined by a void callback fucntion which has a syntax (){//your code}
+        i.e. it is an anonymous function, function without name
+    - Print message in the run window using print();
+    - Hot reload accomodate the changes only under the build() function and not outside it
