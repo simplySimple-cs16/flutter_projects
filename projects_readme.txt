@@ -50,3 +50,12 @@ SizedBox
 6. xylophone-flutter:
     - sounds, texts etc are added the same way images are added i.e creating a folder and then updating the assets section
         in the .yaml file
+    - how to use already developed flutter packages to reduce work and save development time
+    - if floder name is assets then to need to mention folder name while using the images, audio etc. in the assets folder
+    - Flutter function : for using kwargs equivalent named arguments, we must enclosed the keywords inside {} .Eg
+            print(add(n1:1, n2:11));
+
+            int  add( {int n2,int n1} ){
+                return n1+n2;
+            }
+    - free sound website : https://freesound.org/
