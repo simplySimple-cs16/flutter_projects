@@ -59,3 +59,9 @@ SizedBox
                 return n1+n2;
             }
     - free sound website : https://freesound.org/
+
+7. quizzler-flutter
+    - working with List<widgets> or List<Icon>
+    - to mark that a typo is not wrong word but a unique word for you, right click the word and on spelling
+        set it accordingly
+    - dart classes and objects, abstraction, encapsulation, inheritance, polymorphism
