@@ -65,3 +65,32 @@ SizedBox
     - to mark that a typo is not wrong word but a unique word for you, right click the word and on spelling
         set it accordingly
     - dart classes and objects, abstraction, encapsulation, inheritance, polymorphism
+    - abstraction : dividing a huge class into smaller and simpler classes for easy use and scalability
+    - encapsulation : making class properties(variable, list etc) private by just starting the name by an underscore "_"
+    - inheritance : class a inherits class b by typing, class a extends b
+    - polymorphism : child class a of parent class b overrides a method by typing @overrride above it.
+            eg. class Parent{
+                void printAge(){
+                    print('I am 55');
+                }
+            }
+                
+                class Child extends Parent{
+                    @override
+                    void printAge(
+                        print('I am 20');
+                    )
+                }
+            a child class can also carry on the method of parent and also add some new things to it by :
+                classes SecondChild extends Parent{
+                    @overrride
+                    void printAge(){
+                        super.printAge();
+                        print('Tommorow is my birthday');  
+                    }
+                }
+                on calling it, the console will print :
+                I am 55
+                Tommorow is my birthday
+    - RFlutter Alert is super customizable and easy-to-use alert/popup dialogs for Flutter.
+    - class constructor shortcut => ClassName({this.property1,this.property2});
