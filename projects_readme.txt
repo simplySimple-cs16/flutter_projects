@@ -94,3 +94,8 @@ SizedBox
                 Tommorow is my birthday
     - RFlutter Alert is super customizable and easy-to-use alert/popup dialogs for Flutter.
     - class constructor shortcut => ClassName({this.property1,this.property2});
+
+8. destini
+    - adding image to Container using decoration property: 
+        https://stackoverflow.com/questions/52211283/inserting-image-into-a-container-flutter-app
+    - visibility widget to make button disappear when they are not needed
