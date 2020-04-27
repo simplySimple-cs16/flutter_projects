@@ -97,5 +97,32 @@ SizedBox
 
 8. destini
     - adding image to Container using decoration property: 
+        https://github.com/londonappbrewery/destini-challenge-completed/commit/75dc146209227fe80020115498156363fad50d69
         https://stackoverflow.com/questions/52211283/inserting-image-into-a-container-flutter-app
     - visibility widget to make button disappear when they are not needed
+
+9. bmi-calculator
+    - browser app for knowing the hex code of any color present in an image 
+        https://www.colorzilla.com/ [get the color of any pixel or area on the page]
+    - using custom color Color(0xFF"hex value of your color") ->FF means the opacity is 100%
+    - how to have curve edged borders
+    - if a child and a parent has a common property, it must be declared in the child otherwise the app will crash. Eg.
+        while using decoration BoxDecoration inside Container for adding curve edges to the conatiner, the color of the conatiner
+        must be specified inside the BoxDecoration.
+    - Expanded widget is used so that child widgets don't go out of shape when changing screen sizes or oreintations,
+        it should replace height and width property of the child container.
+    - if a set of hierarchical widgets are repetitive u can develop a new widget out of this, by
+        1. selecting the top-most parent widget
+        2. Go to flutter outline
+        3. Right clikc on the selected widget 
+        4. Select Extract Widget
+        5. Give a name for ur custom widget
+        6. Now u can use it just by calling its name
+    - to make an argument compulsory put @required infront of it. For eg when declaring class constructor
+    - const vs final:
+        - variables of both types are immutable i.e they can't be reassigned any value once initialized
+        - both are similar, but const variables can't be assigned to some functions that returns an output at runtime like
+            DateTime.now(). I.e its scope is only upto compile time.
+        - const should be used for numbers or explicitly hardcoded values. And final must be assigned values that have indirect
+            or implicit assignment
+        - font awesome flutter package used that have onPressed functionality on icons
