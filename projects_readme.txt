@@ -125,4 +125,26 @@ SizedBox
             DateTime.now(). I.e its scope is only upto compile time.
         - const should be used for numbers or explicitly hardcoded values. And final must be assigned values that have indirect
             or implicit assignment
-        - font awesome flutter package used that have onPressed functionality on icons
+        - font awesome flutter package used that have onPressed functionality on icons -- INCORRECT
+        - the problem with flat button is that it overrides the design inside the child widget. So instead use
+            GestureDetector widget which has many other functions like onTap and other gestures and it don't impact the design
+            in the child widget
+        - Dart enums useful when a varibale can take finite values. Eg carTypes
+        - Dart Ternary Operators (used in place of if and else for one line code like =>)
+        - Dart functions are first order objects meaning they can be pass as arguments in other function as well like:
+            int calculator(int a,int b, Function functionName){
+                return functionName(a,b);
+            }
+            or even
+            Function calculator = (int a,int b, Function functionName){return functionName(a,b);}
+        - Functions are called when () is put after their name or else they are like a varibale which can be assigned some values
+            or can be passed as parameters to other function.
+        - Its a convention to name all constants starting with 'k' like 'const kHeight=...' so that whenever u type k android
+            studio will list out all the constants for you.
+        - Making Text() of different font size align to the same baseline provided these widgets are under the same row:
+            crossAxisAlignment: CrossAxisAlignment.baseline,
+            textBaseline: TextBaseline.alphabetic, //this line is important, without this your app will crash
+        - IMP : HOW TO CHANGE ONLY SPECIFIC VALUES OUT OF ALL REQUIRED VALUES for a property OF a Widget : 
+                property = ParentWidget.of(context).copyWith(
+                    specific_values[....]
+                )
