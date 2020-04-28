@@ -148,3 +148,14 @@ SizedBox
                 property = ParentWidget.of(context).copyWith(
                     specific_values[....]
                 )
+        - navigation between screens(routes) in flutter is like stack push and pop
+        - context is the BuildContext of current widget and it determines the location of it
+        - learn how to toggle between android and ios platform using the same device.
+        - home and initialRoute property can never exist together because they conflict with each other
+        - use named routes when there are 3 screens or more other wise use the simpler route method for navigation
+        - dart map data structure:
+            Map<KeyType, ValueType> mapName{
+                Key : Value,
+            }
+        - Expanded can't be a direct child of scaffold widget
+        - passing values between two screens using class constructors
