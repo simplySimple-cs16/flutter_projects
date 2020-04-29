@@ -159,3 +159,23 @@ SizedBox
             }
         - Expanded can't be a direct child of scaffold widget
         - passing values between two screens using class constructors
+
+10. Clima weather app
+    - permissions for android - android/app/src/main/AndroidManifest.xml
+        permissions for ios - ios/Runner/Info.plist
+    - for using location of the ios simulator enable location to apple in the features menu of the simulator
+    - synchronous -> code executes line by line no matter how much a code line has to wait for the previous line to finish.
+    - asynchronous -> if a line is taking more time then next line gets executed while the current line is executing on 
+                        background.
+    - how to use async await and Future
+    - lifecycle of widgets:
+        stateless : only build method. They are created and destroyed but can't be modified i.e their state can't be changed
+        stateful : init, build and deactivate. Their state can change
+                    init : put your code here if u want it to run when the stateful widget is created and added to the tree
+                    build : put your code here if u want it to run again and again whenever the stateful is build and rebuild
+                    deactivate : put your code here if u want it to run when the stateful widget gets destroyed
+    - dart exception handling, try{}, catch(e){} and throw '';
+    - ?? in dart i.e Null aware operator
+       int x = y ?? 2;
+       if y!=null x=2 else x=2. i.e 2 is the default value for x
+    - we can use await only infront of functions that has Future<> return value
