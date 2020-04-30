@@ -179,3 +179,23 @@ SizedBox
        int x = y ?? 2;
        if y!=null x=2 else x=2. i.e 2 is the default value for x
     - we can use await only infront of functions that has Future<> return value
+    - while using an api always check the status code first. If it is 200 then proceed else print the error statys code.
+    - use of dart alias -> 'as' eg.
+        import 'package:http/http.dart';
+        void getData() async {
+            Response response = await get('https://samples.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=439d4b804bc8187953eb36d2a8c26a02');
+            if (response.statusCode == 200) {
+                print(response.body);
+            } else
+                print(response.statusCode);
+        }
+        using as to make the code clearer because get is not actually defined by the user.
+        import 'package:http/http.dart' as http;
+        void getData() async {
+            http.Response response = await http.get('https://samples.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=439d4b804bc8187953eb36d2a8c26a02');
+            if (response.statusCode == 200) {
+                print(response.body);
+            } else
+                print(response.statusCode);
+        }
+        
