@@ -212,3 +212,14 @@ SizedBox
         '${kadum.perme}'
     - emojis are String and can be used as text in Text() widget
     - learn about TextField() for taking input from users.
+    - rounding TextField's border. Inside the InputDecoration():
+        border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(10.0),
+                      ),
+                    ),
+    - taking input from TextField(). Poperty is:
+        onChanged: (value) {
+                    print(value);
+                  },
+    - learn how to pass back data from current screen to previous screen.
