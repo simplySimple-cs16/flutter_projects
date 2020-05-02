@@ -161,6 +161,10 @@ SizedBox
         - passing values between two screens using class constructors
 
 10. Clima weather app
+    - packages used:
+        geolocator: ^5.3.1
+        http: ^0.12.1
+        flutter_spinkit: ^4.1.2
     - permissions for android - android/app/src/main/AndroidManifest.xml
         permissions for ios - ios/Runner/Info.plist
     - for using location of the ios simulator enable location to apple in the features menu of the simulator
@@ -198,4 +202,13 @@ SizedBox
             } else
                 print(response.statusCode);
         }
-        
+    - dart package for working with json 
+        import 'dart:convert';
+        and then jsonDecode(json)[path to key][path to key]...
+    - api and api keys for openweathermap.org to get weather information from any lat and long. Otherwise u have to work with
+        sample json data only
+    - learn how to pass data from another class to a class and then to its state object by using widget.dataName
+    - how to use string interpolation for objects that are connected by . :
+        '${kadum.perme}'
+    - emojis are String and can be used as text in Text() widget
+    - learn about TextField() for taking input from users.
