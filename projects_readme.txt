@@ -232,3 +232,22 @@ SizedBox
         List<T> listName = [];    otherwise app will crash.
     - learned how to build platform specific [ios or android] using the same project.
     - dart show and hide to import specific libraries.
+    - how to make list of widgets for column and return the column as a child of another parent widget:
+        ////For bonus points, create a method that loops through the cryptoList and generates a CryptoCard for each. 
+        Call makeCards() in the build() method instead of the Column with 3 CryptoCards.
+                Column makeCards() {
+                    List<CryptoCard> cryptoCards = [];
+                    for (String crypto in cryptoList) {
+                    cryptoCards.add(
+                        CryptoCard(
+                        cryptoCurrency: crypto,
+                        selectedCurrency: selectedCurrency,
+                        value: isWaiting ? '?' : coinValues[crypto],
+                        ),
+                    );
+                    }
+                    return Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: cryptoCards,
+                    );
+                }
