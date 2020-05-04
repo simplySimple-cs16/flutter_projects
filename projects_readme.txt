@@ -229,7 +229,7 @@ SizedBox
     - using loop to add list of DropdownMenuItem to the DropdownButton.
     - how to use cupertino ios widgets like the rotating dropdown menu i.e CupertinoPicker.
     - you can't add into a list until you have initialized i.e
-        List<T> listName = [];    otherwise app will crash.
+        List<T> listName = [];    otherwise app will crash. 
     - learned how to build platform specific [ios or android] using the same project.
     - dart show and hide to import specific libraries.
     - how to make list of widgets for column and return the column as a child of another parent widget:
@@ -251,3 +251,4 @@ SizedBox
                     children: cryptoCards,
                     );
                 }
+12. flash-chat
