@@ -252,3 +252,14 @@ SizedBox
                     );
                 }
 12. flash-chat
+    - learn about static Modifier. Use to define variables and metgods for a class that can be accessed without 
+        using object of that class.
+        For eg:
+        class Abc{ 
+            String id = 'abc'; 
+            static String uid='ABC'; 
+        }
+        print(Abc().id); // out: abc
+        print(Abc.uid); // out : ABC ... no class object created and used which is more efficient
+    - whenever u declare a const var inside a class it has to static otherwise there will be error. Because a const property 
+        should be equal and static i.e not dynamic for every object.
