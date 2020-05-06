@@ -114,7 +114,7 @@ SizedBox
     - if a set of hierarchical widgets are repetitive u can develop a new widget out of this, by
         1. selecting the top-most parent widget
         2. Go to flutter outline
-        3. Right clikc on the selected widget 
+        3. Right click on the selected widget 
         4. Select Extract Widget
         5. Give a name for ur custom widget
         6. Now u can use it just by calling its name
@@ -252,6 +252,8 @@ SizedBox
                     );
                 }
 12. flash-chat
+    - packages used:
+        modal_progress_hud: ^0.1.3 //for adding a spinning wheel while user is logging in or registering.
     - learn about static Modifier. Use to define variables and metgods for a class that can be accessed without 
         using object of that class.
         For eg:
@@ -263,3 +265,36 @@ SizedBox
         print(Abc.uid); // out : ABC ... no class object created and used which is more efficient
     - whenever u declare a const var inside a class it has to static otherwise there will be error. Because a const property 
         should be equal and static i.e not dynamic for every object.
+    - use staic const String for every named routes.
+    - Learned about flutter animations:
+        - Hero Animation
+        - Custom Animation
+            - AnimationController [vsync,ticker,controller.value] -> for linear animations
+                controller.forward();
+                controller.reverse(from:1.0) //means start from 1.0 to 0
+            - Animation -> [applied on top of animation controller]for curved animations
+                - expects a double value with upperbound of 1.0 otherwise the app will crash if upperbound > 1.0
+                - CurvedAnimation()
+                - Tween()
+                    - Eg:ColorTween() //for smooth animation of colors
+                    - Other are also there like for border,etc.
+                    - All they do is take a begin and an end value and animate between them.
+        - Flutter animation packages by developers
+    - with Modifier adds more capability to a class
+    - addListerner class for seeing how an animation works or listening to a function, specially its changing values.
+    - learn about default dispose method. Here u can put your code which will run when a screen is exited or disposed.
+        Its optimal to dispose animation in dispose method otherwise they will run in the background forever.
+    - Dart 'mixin' : (they are like classes)
+        We can only 'extend' a single parent class but we can add multiple capabalities to a class 'with' multiple 'mixins'
+        Eg.
+        mixin CanWrite{void write(){print('I can write');}}
+        mixin CanRead{void read(){print('I can read');}}
+        class Kadum with CanWrite,CanRead{}
+        void main(){
+            Kadum().write();
+            Kadum.read();
+        }
+    - .coyWith() used to edit only some of the properties of a widget.
+    - TextField() IMP properties for login and registration:
+        keyboardType: TextInputType.emailAddress, //for using keyboard specially for emails.
+        obscureText: true, //for making text not readable ie replacing chars with dots.
