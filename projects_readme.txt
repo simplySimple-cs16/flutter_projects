@@ -304,3 +304,10 @@ SizedBox
         Singular        String                  Future<String>
         Plural       List<String>               Stream<String>
     - how to convert snapshots of stream datas to widget using StreamBuilder<T> class or widget.
+    - CircularProgressIndicator() is the spinner our modal_progress_hud was based. It can be used until the app is
+        receiving data in the background
+    - how to use flutter ListView() which is much simpler than the native ones.
+        -IMP: wrap it with expanded widget otherwise nothing will be visible on the screen.
+    - how to create custom text bubbles like most in chat apps.
+    - property for adding shadow:
+        elevation:
