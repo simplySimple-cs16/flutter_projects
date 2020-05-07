@@ -298,3 +298,9 @@ SizedBox
     - TextField() IMP properties for login and registration:
         keyboardType: TextInputType.emailAddress, //for using keyboard specially for emails.
         obscureText: true, //for making text not readable ie replacing chars with dots.
+    - firebase stream for listening(more specially subscribing) to changes made in the database 
+    - Dart Streams:
+                  Already available           Need to wait
+        Singular        String                  Future<String>
+        Plural       List<String>               Stream<String>
+    - how to convert snapshots of stream datas to widget using StreamBuilder<T> class or widget.
