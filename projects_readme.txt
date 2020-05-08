@@ -181,7 +181,7 @@ SizedBox
     - dart exception handling, try{}, catch(e){} and throw '';
     - ?? in dart i.e Null aware operator
        int x = y ?? 2;
-       if y!=null x=2 else x=2. i.e 2 is the default value for x
+       if y!=null x=y else x=2. i.e 2 is the default value for x
     - we can use await only infront of functions that has Future<> return value
     - while using an api always check the status code first. If it is 200 then proceed else print the error statys code.
     - use of dart alias -> 'as' eg.
@@ -311,3 +311,6 @@ SizedBox
     - how to create custom text bubbles like most in chat apps.
     - property for adding shadow:
         elevation:
+    - TextEditingController() for removing text from a TextField() after the user input is completed and the 
+        confirmation button is pessed.
+    - fixing hero animation to adapt different screen aspect ratios using Flexible() widget wrap over it.
