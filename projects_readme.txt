@@ -316,3 +316,13 @@ SizedBox
     - fixing hero animation to adapt different screen aspect ratios using Flexible() widget wrap over it.
 
 13. todoey
+    - floating action button or FAB is a direct property of scaffold
+    - used ListTile inside ListView
+    - used CheckBox() inside ListTile()
+    - BottomSheet [Modal wala sikai]
+    - got to know about mac's digital colour meter for knowing the rgb of each pixel on the screen although using
+        mac for a long time. Lmao!
+    - how to automatically show up keyboard for a textfield:
+        TextField(
+            autofocus:true,
+        )
