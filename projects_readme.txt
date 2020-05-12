@@ -326,3 +326,55 @@ SizedBox
         TextField(
             autofocus:true,
         )
+    - how to get the height of the device's keyboard in double:
+        MediaQuery.of(context).viewInsets.bottom),
+    - learn how to Position the BottomSheet above the Keyboard
+        link : https://www.udemy.com/course/flutter-bootcamp-with-dart/learn/lecture/17750820#questions/10479702
+    -learn when to lift state:
+        -when child widget is required to update the parent widget just lift up the state i.e declare setState(){} on parent
+        an then pass it to the StatelessWidget child as a class constructor parameter
+        -when a variable has to be used in two different classes at different levels in the widget tree, better to declare
+            the variable in thier ancestor and hence perform state lifting
+    - two type of state:
+        -local state 
+
+        -global state
+    - whenever u change a staful widget to stateless or vice-versa, hot restart is required.
+    - u cannot use setState(){} inside StatelessWidget. But u can pass it(the setState function) as a class constructor parameter
+        of a StatelesWidget from a StatefulWidget to change the value of variables that changes the state of the stateful widget.
+    - IMP : we can pass data back from stateless to statefull widget via callback, even from child back to parent widget.
+    - when the list size is too long or infinite use ListView.builder()
+    - For a StatelessWidget:
+        -declaring variables before build function means that they have to be declared as final and 
+            are class parameters and hence should be initialized by class constructor.
+        -variables which need to used only inside this class and doestn't have any uses im any other outside classes
+            should be declared after the build function.
+    - For StatefulWidget:
+        - variables that have usage in other classes must be declared in the first or parent class before @override and
+            must be initialized using class constructor.
+        - variables that have usage only inside the class must be declared in the second or the child class before the
+            build function.
+        - if u want to pass back a paramter from child to parent through a call back onPressed of a button then call the callback
+            inside the parenthesis of onPressed;
+            Eg :
+                onPressed : (){
+                    callbackName(paramaterName);
+                    }
+                
+                Wrong way:
+                    onPressed : callbackName(parameterName); //app will crash.
+        - Provider package for state management:
+            when u have to pass a value from a parent to a INDIRECT descendent widget, then it is expensive to pass through
+            all the intermidiate classes. So instead use provider package to let the target descendent widget listen or SUBSCRIBE
+            to the changes made to the value in the parent.
+        - ChangeNotifier class by flutter for notifying all the listeners that SUBSCRIBEs a value in this class
+        - ChangeNotifierProvider[provider package] must be used at the main parent widget when using ChangeNotifier[flutter] 
+            class for updating the 
+            descendent widgets.
+        - U can choose to NOT listen to the ChangeNotifier class by:
+            Provider.of<changeNotifierClassName>(context,listen:false).someValue;
+        - when there are too many Provider.of<changeNotifierClassName>(context) lines wrap the widget containing these lines
+            by Consumer widget(by Provider package)
+        - learn how to use flutter 'get' modifier[which is a getter] instead of a function in task_data.dart
+        - notifyListeners() of class ChangeNotifier is like setState(){}, it send notifications to all the widget that 
+            uses a value inside the ChangeNotifier class as well as update the state of the UI.
