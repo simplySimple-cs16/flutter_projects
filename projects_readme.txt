@@ -378,3 +378,15 @@ SizedBox
         - learn how to use flutter 'get' modifier[which is a getter] instead of a function in task_data.dart
         - notifyListeners() of class ChangeNotifier is like setState(){}, it send notifications to all the widget that 
             uses a value inside the ChangeNotifier class as well as update the state of the UI.
+        - u can indirectly access a class private property via a getter like:
+            class A{
+                List<String> _abc = ['Huka', 'Valorant', 'CSGO']; //private
+
+                List<String> get abc{
+                    return _abc;
+                }
+            }
+
+            class B{
+                print(A().abc[1]);
+            }

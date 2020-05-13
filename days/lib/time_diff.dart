@@ -1,6 +1,6 @@
 class TimeDiff {
   var now = new DateTime.now();
-  var deadline = new DateTime(2020, 05, 3);
+  var deadline = new DateTime(2020, 05, 15);
 
   String getDiff() {
     now = DateTime.now();
