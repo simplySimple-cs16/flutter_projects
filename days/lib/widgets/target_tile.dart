@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class TargetTile extends StatelessWidget {
   final String targetTitle, timeLeft;
-  TargetTile({this.targetTitle, this.timeLeft});
+  TargetTile({@required this.targetTitle, @required this.timeLeft});
 
   @override
   Widget build(BuildContext context) {

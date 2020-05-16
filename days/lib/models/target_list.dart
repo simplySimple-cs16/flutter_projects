@@ -3,16 +3,16 @@ import 'package:flutter/foundation.dart';
 
 class TargetList extends ChangeNotifier {
   List<Target> targets = [
-    Target(targetTitle: 'EndSem', date: 'June 1 2020', time: '2:00 pm'),
-    Target(targetTitle: 'Joining', date: 'June 10 2020', time: '10:00 am'),
+    Target(targetTitle: 'EndSem', timeLeft: '10 days'),
+    Target(targetTitle: 'Joining', timeLeft: '10 days'),
   ];
 
   int get targetsCount {
     return targets.length;
   }
 
-  void addTarget({String targetTitle, String date, String time}) {
-    targets.add(Target(targetTitle: targetTitle, date: date, time: time));
+  void addTarget({String targetTitle, String timeLeft}) {
+    targets.add(Target(targetTitle: targetTitle, timeLeft: timeLeft));
     notifyListeners();
   }
 

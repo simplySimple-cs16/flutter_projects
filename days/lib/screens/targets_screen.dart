@@ -15,19 +15,19 @@ class _TargetsScreenState extends State<TargetsScreen> {
   TimeDiff timeDiff = new TimeDiff();
   String targetTitle, targetDate, targetTime;
 
-  /*@override
+  @override
   void initState() {
     Timer.periodic(Duration(seconds: 1), (Timer t) {
       setState(() {});
     });
     super.initState();
-  }*/
+  }
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.teal[100],
+        //backgroundColor: Colors.teal[100],
         appBar: AppBar(
           backgroundColor: Colors.teal,
           title: Text(
@@ -45,8 +45,7 @@ class _TargetsScreenState extends State<TargetsScreen> {
                     itemBuilder: (context, index) {
                       return TargetTile(
                         targetTitle: targetList.targets[index].targetTitle,
-                        timeLeft:
-                            targetList.getTimeLeft(targetList.targets[index]),
+                        timeLeft: targetList.targets[index].timeLeft,
                       );
                     },
                   );
@@ -56,20 +55,21 @@ class _TargetsScreenState extends State<TargetsScreen> {
           ],
         ),
         floatingActionButton: FloatingActionButton(
-            backgroundColor: Colors.tealAccent,
-            child: Icon(Icons.add),
-            onPressed: () {
-              showModalBottomSheet(
-                context: context,
-                builder: (BuildContext context) => SingleChildScrollView(
-                  child: Container(
-                    padding: EdgeInsets.only(
-                        bottom: MediaQuery.of(context).viewInsets.bottom),
-                    child: AddTargetScreen(),
-                  ),
+          backgroundColor: Colors.pinkAccent,
+          child: Icon(Icons.add),
+          onPressed: () {
+            showModalBottomSheet(
+              context: context,
+              builder: (BuildContext context) => SingleChildScrollView(
+                child: Container(
+                  padding: EdgeInsets.only(
+                      bottom: MediaQuery.of(context).viewInsets.bottom),
+                  child: AddTargetScreen(),
                 ),
-              );
-            }),
+              ),
+            );
+          },
+        ),
       ),
     );
   }

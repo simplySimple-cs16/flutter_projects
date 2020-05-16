@@ -11,7 +11,8 @@ class Days extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => TargetList(),
       child: MaterialApp(
-        theme: ThemeData(primarySwatch: Colors.teal),
+        debugShowCheckedModeBanner: false,
+        //theme: ThemeData(primarySwatch: Colors.teal),
         home: TargetsScreen(),
       ),
     );

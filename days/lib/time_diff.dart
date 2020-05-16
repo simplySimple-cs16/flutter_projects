@@ -1,14 +1,10 @@
 class TimeDiff {
-  var now = new DateTime.now();
-  var deadline = new DateTime(2020, 05, 15);
-
-  String getDiff() {
-    now = DateTime.now();
-    String dy = deadline.difference(now).inDays.toString();
+  String getDiff(DateTime currentDate, DateTime targetDate) {
+    String timeLeft = targetDate.difference(currentDate).inDays.toString();
 //    String hr = now.difference(deadline).inHours.toString();
 //    String min = now.difference(deadline).inMinutes.toString();
-    String sec = now.difference(deadline).inSeconds.toString();
-    String diff = dy + 'days ' + sec + 'seconds';
+    String sec = targetDate.difference(currentDate).inSeconds.toString();
+    String diff = timeLeft + 'days ' + sec + 'seconds';
     return diff;
   }
 }
