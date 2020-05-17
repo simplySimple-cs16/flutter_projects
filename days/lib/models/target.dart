@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 
 class Target {
   String targetTitle;
-  String timeLeft;
+  DateTime targetDate;
 
-  Target({@required this.targetTitle, @required this.timeLeft});
+  Target({@required this.targetTitle, @required this.targetDate});
 }

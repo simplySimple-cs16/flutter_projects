@@ -189,7 +189,7 @@ class _AddTargetScreenState extends State<AddTargetScreen> {
 
               Provider.of<TargetList>(context).addTarget(
                 targetTitle: targetTitle,
-                timeLeft: timeLeft,
+                targetDate: targetDate,
               );
               Navigator.pop(context);
             },

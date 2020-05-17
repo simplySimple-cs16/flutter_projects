@@ -45,7 +45,8 @@ class _TargetsScreenState extends State<TargetsScreen> {
                     itemBuilder: (context, index) {
                       return TargetTile(
                         targetTitle: targetList.targets[index].targetTitle,
-                        timeLeft: targetList.targets[index].timeLeft,
+                        timeLeft:
+                            targetList.getTimeLeft(targetList.targets[index]),
                       );
                     },
                   );
