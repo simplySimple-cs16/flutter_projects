@@ -369,8 +369,7 @@ SizedBox
             to the changes made to the value in the parent.
         - ChangeNotifier class by flutter for notifying all the listeners that SUBSCRIBEs a value in this class
         - ChangeNotifierProvider[provider package] must be used at the main parent widget when using ChangeNotifier[flutter] 
-            class for updating the 
-            descendent widgets.
+            class for updating the descendent widgets.
         - U can choose to NOT listen to the ChangeNotifier class by:
             Provider.of<changeNotifierClassName>(context,listen:false).someValue;
         - when there are too many Provider.of<changeNotifierClassName>(context) lines wrap the widget containing these lines
@@ -390,3 +389,8 @@ SizedBox
             class B{
                 print(A().abc[1]);
             }
+
+14. days:
+    -packages used :
+        flutter_datetime_picker: ^1.3.8 -> for the dial time and date picker
+        instant: ^0.3.2 -> for converting utc to any international timezone especially IST.
