@@ -397,5 +397,22 @@ SizedBox
     - learn how to refresh the screen after regular interval of time for changes to be visible after every such interval.
 
 15. Flutter_Demos
+    - packages used:
+        - sqflite 
+            - SQLite plugin for Flutter. Supports iOS, Android and MacOS.
+        - path_provider:
+            - A Flutter plugin for finding commonly used locations on the filesystem. Supports iOS and Android.
+        - Intl 
+            - This package provides internationalization and localization facilities, including message translation, 
+                plurals and genders, date/number formatting and parsing, and bidirectional text.
+        
+
     - DropdownButton() can be used as substitute for pickers for android. 
     - WillPopScope() for handling what to do when the user press the default back button [on bottom in android] of the device
+    - SQFlite plugin only deals with MAP objects. Both storing and retrieval of data are done in the form of MAP objects. 
+    - what is Singleton Class object :
+        a class object which can be initialized once throughout the app lifecycle.
+        eg  : 
+            class DatabaseHelper {
+	            static DatabaseHelper _databaseHelper;    // Singleton DatabaseHelper 
+            }
