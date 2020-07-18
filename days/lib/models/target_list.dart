@@ -4,11 +4,8 @@ import 'package:instant/instant.dart';
 import 'package:days/time_diff.dart';
 
 class TargetList extends ChangeNotifier {
-  List<String> targetsSP = [];
-
   List<Target> targets = [
     Target(targetTitle: 'EndSem', targetDate: DateTime.now()),
-    Target(targetTitle: 'Joining', targetDate: DateTime.now()),
   ];
 
   int get targetsCount {
@@ -16,6 +13,9 @@ class TargetList extends ChangeNotifier {
   }
 
   void addTarget({String targetTitle, DateTime targetDate}) {
+//    var now = new DateTime.now();
+//    int num =
+//        now.year + now.month + now.day + now.hour + now.minute + now.second;
     targets.add(Target(targetTitle: targetTitle, targetDate: targetDate));
     notifyListeners();
   }

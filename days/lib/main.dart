@@ -1,4 +1,5 @@
 import 'package:days/models/target_list.dart';
+import 'package:days/screens/target_detail.dart';
 import 'package:days/screens/targets_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';

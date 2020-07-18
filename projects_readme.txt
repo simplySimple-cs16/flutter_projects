@@ -26,7 +26,7 @@ SizedBox
         the child widget using the yellow light bulb.
     - Working with flat button which already has a padding for its child widget so if its child was already padded then remove 
         the pading for it
-    - Flat Button has on pressed property which is defined by a void callback fucntion which has a syntax (){//your code}
+    - Flat Button has on pressed property which is defined by a void callback function which has a syntax (){//your code}
         i.e. it is an anonymous function, function without name
     - Print message in the run window using print();
     - Hot reload accomodate the changes only under the build() function and not outside it
@@ -51,7 +51,7 @@ SizedBox
     - sounds, texts etc are added the same way images are added i.e creating a folder and then updating the assets section
         in the .yaml file
     - how to use already developed flutter packages to reduce work and save development time
-    - if floder name is assets then to need to mention folder name while using the images, audio etc. in the assets folder
+    - if floder name is assets then no need to mention folder name while using the images, audio etc. in the assets folder
     - Flutter function : for using kwargs equivalent named arguments, we must enclosed the keywords inside {} .Eg
             print(add(n1:1, n2:11));
 
@@ -107,7 +107,7 @@ SizedBox
     - using custom color Color(0xFF"hex value of your color") ->FF means the opacity is 100%
     - how to have curve edged borders
     - if a child and a parent has a common property, it must be declared in the child otherwise the app will crash. Eg.
-        while using decoration BoxDecoration inside Container for adding curve edges to the conatiner, the color of the conatiner
+        while using decoration BoxDecoration inside Container for adding curve edges to the conatiner, the color of the container
         must be specified inside the BoxDecoration.
     - Expanded widget is used so that child widgets don't go out of shape when changing screen sizes or oreintations,
         it should replace height and width property of the child container.
@@ -166,7 +166,7 @@ SizedBox
         http: ^0.12.1
         flutter_spinkit: ^4.1.2
     - permissions for android - android/app/src/main/AndroidManifest.xml
-        permissions for ios - ios/Runner/Info.plist
+      permissions for ios - ios/Runner/Info.plist
     - for using location of the ios simulator enable location to apple in the features menu of the simulator
     - synchronous -> code executes line by line no matter how much a code line has to wait for the previous line to finish.
     - asynchronous -> if a line is taking more time then next line gets executed while the current line is executing on 
@@ -183,7 +183,7 @@ SizedBox
        int x = y ?? 2;
        if y!=null x=y else x=2. i.e 2 is the default value for x
     - we can use await only infront of functions that has Future<> return value
-    - while using an api always check the status code first. If it is 200 then proceed else print the error statys code.
+    - while using an api always check the status code first. If it is 200 then proceed else print the error status code.
     - use of dart alias -> 'as' eg.
         import 'package:http/http.dart';
         void getData() async {
@@ -254,7 +254,7 @@ SizedBox
 12. flash-chat
     - packages used:
         modal_progress_hud: ^0.1.3 //for adding a spinning wheel while user is logging in or registering.
-    - learn about static Modifier. Use to define variables and metgods for a class that can be accessed without 
+    - learn about static Modifier. Use to define variables and methods for a class that can be accessed without 
         using object of that class.
         For eg:
         class Abc{ 
@@ -264,7 +264,7 @@ SizedBox
         print(Abc().id); // out: abc
         print(Abc.uid); // out : ABC ... no class object created and used which is more efficient
     - whenever u declare a const var inside a class it has to static otherwise there will be error. Because a const property 
-        should be equal and static i.e not dynamic for every object.
+        should be equal and static i.e not dynamic, for every object.
     - use staic const String for every named routes.
     - Learned about flutter animations:
         - Hero Animation
@@ -292,7 +292,7 @@ SizedBox
         class Kadum with CanWrite,CanRead{}
         void main(){
             Kadum().write();
-            Kadum.read();
+            Kadum().read();
         }
     - .coyWith() used to edit only some of the properties of a widget.
     - TextField() IMP properties for login and registration:
@@ -339,7 +339,7 @@ SizedBox
         -local state 
 
         -global state
-    - whenever u change a staful widget to stateless or vice-versa, hot restart is required.
+    - whenever u change a stateful widget to stateless or vice-versa, hot restart is required.
     - u cannot use setState(){} inside StatelessWidget. But u can pass it(the setState function) as a class constructor parameter
         of a StatelesWidget from a StatefulWidget to change the value of variables that changes the state of the stateful widget.
     - IMP : we can pass data back from stateless to statefull widget via callback, even from child back to parent widget.
@@ -347,7 +347,7 @@ SizedBox
     - For a StatelessWidget:
         -declaring variables before build function means that they have to be declared as final and 
             are class parameters and hence should be initialized by class constructor.
-        -variables which need to used only inside this class and doestn't have any uses im any other outside classes
+        -variables which need to be used only inside this class and doestn't have any uses im any other outside classes
             should be declared after the build function.
     - For StatefulWidget:
         - variables that have usage in other classes must be declared in the first or parent class before @override and
@@ -395,6 +395,8 @@ SizedBox
         flutter_datetime_picker: ^1.3.8 -> for the dial time and date picker
         instant: ^0.3.2 -> for converting utc to any international timezone especially IST.
     - learn how to refresh the screen after regular interval of time for changes to be visible after every such interval.
+    - YOU CAN UPDATE THE STATE OF A SCREEN BY SET STATE ON THE SAME DART FILE BUT WHICH REQUIRES A VARIABLE FROM THE CHILD DART
+        FILE USING CALLBACKS.
 
 15. Flutter_Demos
     - packages used:
@@ -410,9 +412,20 @@ SizedBox
     - DropdownButton() can be used as substitute for pickers for android. 
     - WillPopScope() for handling what to do when the user press the default back button [on bottom in android] of the device
     - SQFlite plugin only deals with MAP objects. Both storing and retrieval of data are done in the form of MAP objects. 
-    - what is Singleton Class object :
-        a class object which can be initialized once throughout the app lifecycle.
+    - what is Singleton Class object and a factory class constructor:
+        a class object which can be initialized only once throughout the app lifecycle is called singleton object. factory class
+        constructor can return a class instance or object like a function returns a value.
         eg  : 
             class DatabaseHelper {
-	            static DatabaseHelper _databaseHelper;    // Singleton DatabaseHelper 
+	            static DatabaseHelper _databaseHelper;    // Singleton object
+
+                factory DatabaseHelper() {
+		            if (_databaseHelper == null) {
+			            _databaseHelper = DatabaseHelper._createInstance(); // This is executed only once, singleton object
+		            }
+		            return _databaseHelper;
+	            }
             }
+    - dart named class constructor : https://www.youtube.com/watch?v=aFr7mNHadL4
+    - flutter SnackBar() for displaying quick pop up message at bottom for a short time.
+    - flutter AlertDialog() for displaying persistent message on the screen. 

@@ -1,11 +1,19 @@
+import 'package:days/models/target.dart';
 import 'package:days/time_diff.dart';
+import 'package:days/utils/database_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:days/models/target_list.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:instant/instant.dart';
+import 'dart:async';
+
+import 'package:path/path.dart';
+import 'package:sqflite/sqflite.dart';
 
 class AddTargetScreen extends StatefulWidget {
+  final Function addTargetCallback;
+  AddTargetScreen(this.addTargetCallback);
   @override
   _AddTargetScreenState createState() => _AddTargetScreenState();
 }
@@ -31,6 +39,11 @@ class _AddTargetScreenState extends State<AddTargetScreen> {
   var currentDate = dateTimeToZone(zone: 'IST', datetime: DateTime.now());
   int y, m, d, hr, min;
   DateTime targetDate;
+
+  //Database Section
+  DatabaseHelper helper = DatabaseHelper();
+
+  Target target;
 
   @override
   Widget build(BuildContext context) {
@@ -168,7 +181,7 @@ class _AddTargetScreenState extends State<AddTargetScreen> {
                 color: Colors.black,
               ),
             ),
-            onPressed: () {
+            onPressed: () async {
               //Wrong Code
               /*TargetList().addTarget(
                 targetTitle: targetTitle,
@@ -187,11 +200,13 @@ class _AddTargetScreenState extends State<AddTargetScreen> {
               print('$date $time');
               String timeLeft = TimeDiff().getDiff(currentDate, targetDate);
 
-              Provider.of<TargetList>(context).addTarget(
+              /* Provider.of<TargetList>(context).addTarget(
                 targetTitle: targetTitle,
                 targetDate: targetDate,
-              );
-              Navigator.pop(context);
+              );*/
+              target = Target(targetTitle: targetTitle, targetDate: targetDate);
+
+              widget.addTargetCallback(target);
             },
           )
         ],
